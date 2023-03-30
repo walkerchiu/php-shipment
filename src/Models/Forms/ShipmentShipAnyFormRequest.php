@@ -20,7 +20,7 @@ class ShipmentShipAnyFormRequest extends FormRequest
             && empty($data['id'])
             && isset($request->id)
         ) {
-            $data['id'] = (int) $request->id;
+            $data['id'] = (string) $request->id;
             $this->getInputSource()->replace($data);
         }
 
